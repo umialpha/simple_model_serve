@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Traefik 服务
+  traefik:
+    image: traefik:v2.9
+    command:
+      - "--api.insecure=true"  # 启用 Traefik 的 API，用于调试
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:8080"  # 定义 web 入口
+    ports:
+      - "8080:8080"    # HTTP 端口
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  # 应用服务 v1
+  app_v1:
+    image: localhost/apple-test:latest
+    environment:
+      - PORT=5000  # 配置应用使用的端口
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]  # 请求 GPU 资源
+              device_ids: ["0"]  # 使用 GPU 设备 0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=PathPrefix(`/`)"  # 匹配任何路径
+      - "traefik.http.services.app.loadbalancer.sticky=true"
+      - "traefik.http.services.app.loadbalancer.server.port=5000"  # 应用暴露的端口
+      - "traefik.http.services.app.loadbalancer.weights.app_v1=50"  # 50%流量分配给v1
+
+  # 应用服务 v2
+  app_v2:
+    image: localhost/apple-test:latest
+    environment:
+      - PORT=5000  # 确保端口与 v1 相同
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["1"]  # 使用 GPU 设备 0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=PathPrefix(`/`)"  # 匹配任何路径
+      - "traefik.http.services.app.loadbalancer.sticky=true"
+      - "traefik.http.services.app.loadbalancer.server.port=5000"
+      - "traefik.http.services.app.loadbalancer.weights.app_v2=50"  # 50%流量分配给v2

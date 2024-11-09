@@ -1,0 +1,375 @@
+[2024-11-09 00:53:26,428] INFO [65920-4361836032] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 00:53:26,428] INFO [65920-4361836032] Started parent process [65920]
+[2024-11-09 00:53:32,515] INFO [65925-4626466304] Started server process [65925]
+[2024-11-09 00:53:32,515] INFO [65925-4626466304] Waiting for application startup.
+[2024-11-09 00:53:32,517] INFO [65922-4605900288] Started server process [65922]
+[2024-11-09 00:53:32,518] INFO [65922-4605900288] Waiting for application startup.
+[2024-11-09 00:53:32,524] INFO [65922-4605900288] Application startup complete.
+[2024-11-09 00:53:32,524] INFO [65925-4626466304] Application startup complete.
+[2024-11-09 00:53:32,534] INFO [65923-4544501248] Started server process [65923]
+[2024-11-09 00:53:32,535] INFO [65923-4544501248] Waiting for application startup.
+[2024-11-09 00:53:32,536] INFO [65924-4563060224] Started server process [65924]
+[2024-11-09 00:53:32,537] INFO [65924-4563060224] Waiting for application startup.
+[2024-11-09 00:53:32,544] INFO [65923-4544501248] Application startup complete.
+[2024-11-09 00:53:32,546] INFO [65924-4563060224] Application startup complete.
+[2024-11-09 00:54:33,314] INFO [65924-4563060224] 127.0.0.1:55464 - "GET /docs HTTP/1.1" 200
+[2024-11-09 00:54:34,565] INFO [65924-4563060224] 127.0.0.1:55464 - "GET /openapi.json HTTP/1.1" 200
+[2024-11-09 00:54:40,216] INFO [65923-4544501248] 127.0.0.1:55465 - "GET / HTTP/1.1" 404
+[2024-11-09 00:54:42,594] INFO [65923-4544501248] 127.0.0.1:55465 - "GET /metrics HTTP/1.1" 200
+[2024-11-09 00:56:21,849] INFO [65923-4544501248] 127.0.0.1:56344 - "GET /docs HTTP/1.1" 200
+[2024-11-09 00:56:22,711] INFO [65923-4544501248] 127.0.0.1:56344 - "GET /openapi.json HTTP/1.1" 200
+[2024-11-09 00:56:31,851] INFO [65924-123145439260672] API predict called , data=[[1.0, 2.0], [3.0, 4.0]]
+[2024-11-09 00:56:31,884] INFO [65924-4563060224] 127.0.0.1:56346 - "POST /v1alpha1/simple_model/predict HTTP/1.1" 200
+[2024-11-09 00:56:49,403] INFO [65924-4563060224] Shutting down
+[2024-11-09 00:56:49,427] INFO [65923-4544501248] Shutting down
+[2024-11-09 00:56:49,416] INFO [65922-4605900288] Shutting down
+[2024-11-09 00:56:49,422] INFO [65925-4626466304] Shutting down
+[2024-11-09 00:56:49,441] INFO [65920-4361836032] Received SIGINT, exiting.
+[2024-11-09 00:56:49,450] INFO [65920-4361836032] Terminated child process [65922]
+[2024-11-09 00:56:49,453] INFO [65920-4361836032] Terminated child process [65923]
+[2024-11-09 00:56:49,454] INFO [65920-4361836032] Terminated child process [65924]
+[2024-11-09 00:56:49,455] INFO [65920-4361836032] Terminated child process [65925]
+[2024-11-09 00:56:49,457] INFO [65920-4361836032] Waiting for child process [65922]
+[2024-11-09 00:56:49,506] INFO [65924-4563060224] Waiting for application shutdown.
+[2024-11-09 00:56:49,515] INFO [65924-4563060224] Application shutdown complete.
+[2024-11-09 00:56:49,518] INFO [65924-4563060224] Finished server process [65924]
+[2024-11-09 00:56:49,529] INFO [65923-4544501248] Waiting for application shutdown.
+[2024-11-09 00:56:49,534] INFO [65923-4544501248] Application shutdown complete.
+[2024-11-09 00:56:49,539] INFO [65923-4544501248] Finished server process [65923]
+[2024-11-09 00:56:49,544] INFO [65922-4605900288] Waiting for application shutdown.
+[2024-11-09 00:56:49,554] INFO [65925-4626466304] Waiting for application shutdown.
+[2024-11-09 00:56:49,577] INFO [65922-4605900288] Application shutdown complete.
+[2024-11-09 00:56:49,578] INFO [65922-4605900288] Finished server process [65922]
+[2024-11-09 00:56:49,581] INFO [65925-4626466304] Application shutdown complete.
+[2024-11-09 00:56:49,583] INFO [65925-4626466304] Finished server process [65925]
+[2024-11-09 00:56:49,620] INFO [65920-4361836032] Waiting for child process [65923]
+[2024-11-09 00:56:49,621] INFO [65920-4361836032] Waiting for child process [65924]
+[2024-11-09 00:56:49,623] INFO [65920-4361836032] Waiting for child process [65925]
+[2024-11-09 00:56:49,631] INFO [65920-4361836032] Stopping parent process [65920]
+[2024-11-09 02:54:55,522] INFO [98094-4767675904] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 02:54:55,523] INFO [98094-4767675904] Started parent process [98094]
+[2024-11-09 02:55:00,797] INFO [98099-4743304704] Started server process [98099]
+[2024-11-09 02:55:00,798] INFO [98099-4743304704] Waiting for application startup.
+[2024-11-09 02:55:00,800] INFO [98101-4726224384] Started server process [98101]
+[2024-11-09 02:55:00,801] INFO [98101-4726224384] Waiting for application startup.
+[2024-11-09 02:55:00,803] INFO [98100-4611032576] Started server process [98100]
+[2024-11-09 02:55:00,804] INFO [98100-4611032576] Waiting for application startup.
+[2024-11-09 02:55:00,805] INFO [98099-4743304704] Application startup complete.
+[2024-11-09 02:55:00,807] INFO [98101-4726224384] Application startup complete.
+[2024-11-09 02:55:00,809] INFO [98100-4611032576] Application startup complete.
+[2024-11-09 02:55:00,830] INFO [98098-4559525376] Started server process [98098]
+[2024-11-09 02:55:00,831] INFO [98098-4559525376] Waiting for application startup.
+[2024-11-09 02:55:00,836] INFO [98098-4559525376] Application startup complete.
+[2024-11-09 02:55:10,557] INFO [98098-4559525376] 127.0.0.1:51613 - "GET /docs HTTP/1.1" 200
+[2024-11-09 02:55:11,089] INFO [98098-4559525376] 127.0.0.1:51613 - "GET /openapi.json HTTP/1.1" 200
+[2024-11-09 02:55:22,338] INFO [98100-123145540800512] API predict called , data=[[1.0, 2.0], [3.0, 4.0]]
+[2024-11-09 02:55:22,346] INFO [98100-4611032576] 127.0.0.1:51615 - "POST /v1alpha1/simple_model/predict HTTP/1.1" 200
+[2024-11-09 02:55:27,888] INFO [98101-4726224384] 127.0.0.1:51630 - "GET /docs HTTP/1.1" 200
+[2024-11-09 02:55:28,344] INFO [98101-4726224384] 127.0.0.1:51630 - "GET /openapi.json HTTP/1.1" 200
+[2024-11-09 02:55:29,370] INFO [98101-4726224384] 127.0.0.1:51630 - "GET /metrics HTTP/1.1" 200
+[2024-11-09 02:56:54,749] INFO [98101-4726224384] Shutting down
+[2024-11-09 02:56:54,750] INFO [98100-4611032576] Shutting down
+[2024-11-09 02:56:54,752] INFO [98098-4559525376] Shutting down
+[2024-11-09 02:56:54,754] INFO [98099-4743304704] Shutting down
+[2024-11-09 02:56:54,852] INFO [98100-4611032576] Waiting for application shutdown.
+[2024-11-09 02:56:54,852] INFO [98101-4726224384] Waiting for application shutdown.
+[2024-11-09 02:56:54,852] INFO [98100-4611032576] Application shutdown complete.
+[2024-11-09 02:56:54,852] INFO [98100-4611032576] Finished server process [98100]
+[2024-11-09 02:56:54,853] INFO [98098-4559525376] Waiting for application shutdown.
+[2024-11-09 02:56:54,855] INFO [98101-4726224384] Application shutdown complete.
+[2024-11-09 02:56:54,855] INFO [98098-4559525376] Application shutdown complete.
+[2024-11-09 02:56:54,855] INFO [98098-4559525376] Finished server process [98098]
+[2024-11-09 02:56:54,855] INFO [98101-4726224384] Finished server process [98101]
+[2024-11-09 02:56:54,863] INFO [98099-4743304704] Waiting for application shutdown.
+[2024-11-09 02:56:54,871] INFO [98099-4743304704] Application shutdown complete.
+[2024-11-09 02:56:54,872] INFO [98099-4743304704] Finished server process [98099]
+[2024-11-09 02:56:55,071] INFO [98094-4767675904] Received SIGINT, exiting.
+[2024-11-09 02:56:55,074] INFO [98094-4767675904] Terminated child process [98098]
+[2024-11-09 02:56:55,075] INFO [98094-4767675904] Terminated child process [98099]
+[2024-11-09 02:56:55,076] INFO [98094-4767675904] Terminated child process [98100]
+[2024-11-09 02:56:55,076] INFO [98094-4767675904] Terminated child process [98101]
+[2024-11-09 02:56:55,076] INFO [98094-4767675904] Waiting for child process [98098]
+[2024-11-09 02:56:55,107] INFO [98094-4767675904] Waiting for child process [98099]
+[2024-11-09 02:56:55,109] INFO [98094-4767675904] Waiting for child process [98100]
+[2024-11-09 02:56:55,110] INFO [98094-4767675904] Waiting for child process [98101]
+[2024-11-09 02:56:55,113] INFO [98094-4767675904] Stopping parent process [98094]
+[2024-11-09 02:56:56,314] INFO [98756-4471739904] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 02:56:56,315] INFO [98756-4471739904] Started parent process [98756]
+[2024-11-09 02:56:59,914] INFO [98759-4692940288] Started server process [98759]
+[2024-11-09 02:56:59,914] INFO [98759-4692940288] Waiting for application startup.
+[2024-11-09 02:56:59,914] INFO [98760-4610901504] Started server process [98760]
+[2024-11-09 02:56:59,915] INFO [98760-4610901504] Waiting for application startup.
+[2024-11-09 02:56:59,914] INFO [98762-4469577216] Started server process [98762]
+[2024-11-09 02:56:59,915] INFO [98762-4469577216] Waiting for application startup.
+[2024-11-09 02:56:59,917] INFO [98761-4724925952] Started server process [98761]
+[2024-11-09 02:56:59,917] INFO [98761-4724925952] Waiting for application startup.
+[2024-11-09 02:56:59,918] INFO [98759-4692940288] Application startup complete.
+[2024-11-09 02:56:59,918] INFO [98760-4610901504] Application startup complete.
+[2024-11-09 02:56:59,919] INFO [98762-4469577216] Application startup complete.
+[2024-11-09 02:56:59,922] INFO [98761-4724925952] Application startup complete.
+[2024-11-09 02:57:06,909] INFO [98762-123145359433728] API predict called , data=[[1.0, 2.0], [3.0, 4.0]]
+[2024-11-09 02:57:06,911] INFO [98762-4469577216] 127.0.0.1:51751 - "POST /v1alpha1/simple_model/predict HTTP/1.1" 500
+[2024-11-09 02:57:06,911] ERROR [98762-4469577216] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette_prometheus/middleware.py", line 57, in dispatch
+    raise e from None
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette_prometheus/middleware.py", line 53, in dispatch
+    response = await call_next(request)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/base.py", line 163, in call_next
+    raise app_exc
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/starlette/concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2441, in run_sync_in_worker_thread
+    return await future
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 943, in run
+    result = context.run(func, *args)
+  File "/Users/roylee/gits/apple-takehome-challenge/app/router_v1beta1.py", line 29, in predict
+    output = ModelZoo.Simple.predict(input)
+  File "/Users/roylee/gits/apple-takehome-challenge/app/models.py", line 118, in predict
+    return self.postprocess(score)
+  File "/Users/roylee/gits/apple-takehome-challenge/app/models.py", line 107, in postprocess
+    record_accuracy(acc)
+  File "/Users/roylee/gits/apple-takehome-challenge/app/models.py", line 15, in record_accuracy
+    simplemodel_acc.set(accuracy)
+  File "/Users/roylee/gits/apple-takehome-challenge/.conda/lib/python3.10/site-packages/prometheus_client/metrics.py", line 438, in set
+    self._value.set(float(value))
+TypeError: float() argument must be a string or a real number, not 'list'
+[2024-11-09 02:57:28,381] INFO [98762-4469577216] Shutting down
+[2024-11-09 02:57:28,387] INFO [98761-4724925952] Shutting down
+[2024-11-09 02:57:28,388] INFO [98760-4610901504] Shutting down
+[2024-11-09 02:57:28,383] INFO [98759-4692940288] Shutting down
+[2024-11-09 02:57:28,487] INFO [98762-4469577216] Waiting for application shutdown.
+[2024-11-09 02:57:28,493] INFO [98762-4469577216] Application shutdown complete.
+[2024-11-09 02:57:28,498] INFO [98762-4469577216] Finished server process [98762]
+[2024-11-09 02:57:28,502] INFO [98760-4610901504] Waiting for application shutdown.
+[2024-11-09 02:57:28,503] INFO [98761-4724925952] Waiting for application shutdown.
+[2024-11-09 02:57:28,503] INFO [98759-4692940288] Waiting for application shutdown.
+[2024-11-09 02:57:28,516] INFO [98760-4610901504] Application shutdown complete.
+[2024-11-09 02:57:28,516] INFO [98760-4610901504] Finished server process [98760]
+[2024-11-09 02:57:28,515] INFO [98761-4724925952] Application shutdown complete.
+[2024-11-09 02:57:28,517] INFO [98761-4724925952] Finished server process [98761]
+[2024-11-09 02:57:28,518] INFO [98759-4692940288] Application shutdown complete.
+[2024-11-09 02:57:28,519] INFO [98759-4692940288] Finished server process [98759]
+[2024-11-09 02:57:28,717] INFO [98756-4471739904] Received SIGINT, exiting.
+[2024-11-09 02:57:28,723] INFO [98756-4471739904] Terminated child process [98759]
+[2024-11-09 02:57:28,723] INFO [98756-4471739904] Terminated child process [98760]
+[2024-11-09 02:57:28,725] INFO [98756-4471739904] Terminated child process [98761]
+[2024-11-09 02:57:28,725] INFO [98756-4471739904] Terminated child process [98762]
+[2024-11-09 02:57:28,729] INFO [98756-4471739904] Waiting for child process [98759]
+[2024-11-09 02:57:28,754] INFO [98756-4471739904] Waiting for child process [98760]
+[2024-11-09 02:57:28,755] INFO [98756-4471739904] Waiting for child process [98761]
+[2024-11-09 02:57:28,755] INFO [98756-4471739904] Waiting for child process [98762]
+[2024-11-09 02:57:28,757] INFO [98756-4471739904] Stopping parent process [98756]
+[2024-11-09 02:57:29,893] INFO [98954-4434298368] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 02:57:29,894] INFO [98954-4434298368] Started parent process [98954]
+[2024-11-09 02:57:34,093] INFO [98959-4525483520] Started server process [98959]
+[2024-11-09 02:57:34,093] INFO [98958-4346975744] Started server process [98958]
+[2024-11-09 02:57:34,094] INFO [98959-4525483520] Waiting for application startup.
+[2024-11-09 02:57:34,094] INFO [98958-4346975744] Waiting for application startup.
+[2024-11-09 02:57:34,094] INFO [98957-4552762880] Started server process [98957]
+[2024-11-09 02:57:34,095] INFO [98957-4552762880] Waiting for application startup.
+[2024-11-09 02:57:34,095] INFO [98956-4565386752] Started server process [98956]
+[2024-11-09 02:57:34,095] INFO [98956-4565386752] Waiting for application startup.
+[2024-11-09 02:57:34,097] INFO [98959-4525483520] Application startup complete.
+[2024-11-09 02:57:34,097] INFO [98958-4346975744] Application startup complete.
+[2024-11-09 02:57:34,098] INFO [98957-4552762880] Application startup complete.
+[2024-11-09 02:57:34,098] INFO [98956-4565386752] Application startup complete.
+[2024-11-09 02:57:35,965] INFO [98956-123145555922944] API predict called , data=[[1.0, 2.0], [3.0, 4.0]]
+[2024-11-09 02:57:35,968] INFO [98956-4565386752] 127.0.0.1:51929 - "POST /v1alpha1/simple_model/predict HTTP/1.1" 200
+[2024-11-09 02:57:48,820] INFO [98956-4565386752] 127.0.0.1:51948 - "GET /metrics HTTP/1.1" 200
+[2024-11-09 03:10:49,367] INFO [98956-4565386752] Shutting down
+[2024-11-09 03:10:49,368] INFO [98957-4552762880] Shutting down
+[2024-11-09 03:10:49,367] INFO [98958-4346975744] Shutting down
+[2024-11-09 03:10:49,372] INFO [98959-4525483520] Shutting down
+[2024-11-09 03:10:49,471] INFO [98956-4565386752] Waiting for application shutdown.
+[2024-11-09 03:10:49,474] INFO [98956-4565386752] Application shutdown complete.
+[2024-11-09 03:10:49,475] INFO [98956-4565386752] Finished server process [98956]
+[2024-11-09 03:10:49,484] INFO [98957-4552762880] Waiting for application shutdown.
+[2024-11-09 03:10:49,485] INFO [98958-4346975744] Waiting for application shutdown.
+[2024-11-09 03:10:49,488] INFO [98959-4525483520] Waiting for application shutdown.
+[2024-11-09 03:10:49,492] INFO [98957-4552762880] Application shutdown complete.
+[2024-11-09 03:10:49,493] INFO [98957-4552762880] Finished server process [98957]
+[2024-11-09 03:10:49,494] INFO [98958-4346975744] Application shutdown complete.
+[2024-11-09 03:10:49,497] INFO [98958-4346975744] Finished server process [98958]
+[2024-11-09 03:10:49,503] INFO [98959-4525483520] Application shutdown complete.
+[2024-11-09 03:10:49,504] INFO [98959-4525483520] Finished server process [98959]
+[2024-11-09 03:10:49,806] INFO [98954-4434298368] Received SIGINT, exiting.
+[2024-11-09 03:10:49,814] INFO [98954-4434298368] Terminated child process [98956]
+[2024-11-09 03:10:49,815] INFO [98954-4434298368] Terminated child process [98957]
+[2024-11-09 03:10:49,815] INFO [98954-4434298368] Terminated child process [98958]
+[2024-11-09 03:10:49,816] INFO [98954-4434298368] Terminated child process [98959]
+[2024-11-09 03:10:49,816] INFO [98954-4434298368] Waiting for child process [98956]
+[2024-11-09 03:10:49,843] INFO [98954-4434298368] Waiting for child process [98957]
+[2024-11-09 03:10:49,845] INFO [98954-4434298368] Waiting for child process [98958]
+[2024-11-09 03:10:49,846] INFO [98954-4434298368] Waiting for child process [98959]
+[2024-11-09 03:10:49,848] INFO [98954-4434298368] Stopping parent process [98954]
+[2024-11-09 03:47:31,088] INFO [16444-4520429056] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 03:47:31,089] INFO [16444-4520429056] Started parent process [16444]
+[2024-11-09 03:47:35,038] INFO [16448-4532495872] Started server process [16448]
+[2024-11-09 03:47:35,038] INFO [16447-4508145152] Started server process [16447]
+[2024-11-09 03:47:35,041] INFO [16448-4532495872] Waiting for application startup.
+[2024-11-09 03:47:35,041] INFO [16447-4508145152] Waiting for application startup.
+[2024-11-09 03:47:35,041] INFO [16450-4593841664] Started server process [16450]
+[2024-11-09 03:47:35,041] INFO [16449-4552799744] Started server process [16449]
+[2024-11-09 03:47:35,041] INFO [16450-4593841664] Waiting for application startup.
+[2024-11-09 03:47:35,041] INFO [16449-4552799744] Waiting for application startup.
+[2024-11-09 03:47:35,045] INFO [16449-4552799744] Application startup complete.
+[2024-11-09 03:47:35,045] INFO [16448-4532495872] Application startup complete.
+[2024-11-09 03:47:35,045] INFO [16447-4508145152] Application startup complete.
+[2024-11-09 03:47:35,045] INFO [16450-4593841664] Application startup complete.
+[2024-11-09 03:47:57,680] INFO [16449-4552799744] Shutting down
+[2024-11-09 03:47:57,680] INFO [16447-4508145152] Shutting down
+[2024-11-09 03:47:57,680] INFO [16450-4593841664] Shutting down
+[2024-11-09 03:47:57,680] INFO [16448-4532495872] Shutting down
+[2024-11-09 03:47:57,783] INFO [16448-4532495872] Waiting for application shutdown.
+[2024-11-09 03:47:57,783] INFO [16449-4552799744] Waiting for application shutdown.
+[2024-11-09 03:47:57,783] INFO [16447-4508145152] Waiting for application shutdown.
+[2024-11-09 03:47:57,783] INFO [16450-4593841664] Waiting for application shutdown.
+[2024-11-09 03:47:57,784] INFO [16449-4552799744] Application shutdown complete.
+[2024-11-09 03:47:57,784] INFO [16448-4532495872] Application shutdown complete.
+[2024-11-09 03:47:57,784] INFO [16450-4593841664] Application shutdown complete.
+[2024-11-09 03:47:57,784] INFO [16447-4508145152] Application shutdown complete.
+[2024-11-09 03:47:57,784] INFO [16449-4552799744] Finished server process [16449]
+[2024-11-09 03:47:57,784] INFO [16447-4508145152] Finished server process [16447]
+[2024-11-09 03:47:57,784] INFO [16450-4593841664] Finished server process [16450]
+[2024-11-09 03:47:57,784] INFO [16448-4532495872] Finished server process [16448]
+[2024-11-09 03:47:57,927] INFO [16444-4520429056] Received SIGINT, exiting.
+[2024-11-09 03:47:57,928] INFO [16444-4520429056] Terminated child process [16447]
+[2024-11-09 03:47:57,929] INFO [16444-4520429056] Terminated child process [16448]
+[2024-11-09 03:47:57,932] INFO [16444-4520429056] Terminated child process [16449]
+[2024-11-09 03:47:57,933] INFO [16444-4520429056] Terminated child process [16450]
+[2024-11-09 03:47:57,933] INFO [16444-4520429056] Waiting for child process [16447]
+[2024-11-09 03:47:57,992] INFO [16444-4520429056] Waiting for child process [16448]
+[2024-11-09 03:47:57,993] INFO [16444-4520429056] Waiting for child process [16449]
+[2024-11-09 03:47:57,994] INFO [16444-4520429056] Waiting for child process [16450]
+[2024-11-09 03:47:57,994] INFO [16444-4520429056] Stopping parent process [16444]
+[2024-11-09 12:48:11,300] INFO [93013-4501124608] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 12:48:11,302] INFO [93013-4501124608] Started parent process [93013]
+[2024-11-09 12:48:18,234] INFO [93020-4495119872] Started server process [93020]
+[2024-11-09 12:48:18,234] INFO [93016-4564153856] Started server process [93016]
+[2024-11-09 12:48:18,235] INFO [93020-4495119872] Waiting for application startup.
+[2024-11-09 12:48:18,235] INFO [93016-4564153856] Waiting for application startup.
+[2024-11-09 12:48:18,239] INFO [93018-4603991552] Started server process [93018]
+[2024-11-09 12:48:18,240] INFO [93018-4603991552] Waiting for application startup.
+[2024-11-09 12:48:18,251] INFO [93019-4558812672] Started server process [93019]
+[2024-11-09 12:48:18,253] INFO [93019-4558812672] Waiting for application startup.
+[2024-11-09 12:48:18,268] INFO [93016-4564153856] Application startup complete.
+[2024-11-09 12:48:18,269] INFO [93018-4603991552] Application startup complete.
+[2024-11-09 12:48:18,269] INFO [93020-4495119872] Application startup complete.
+[2024-11-09 12:48:18,269] INFO [93019-4558812672] Application startup complete.
+[2024-11-09 12:48:23,420] INFO [93018-4603991552] 127.0.0.1:62442 - "GET / HTTP/1.1" 404
+[2024-11-09 12:48:24,527] INFO [93018-4603991552] 127.0.0.1:62442 - "GET /favicon.ico HTTP/1.1" 404
+[2024-11-09 12:48:32,356] INFO [93018-4603991552] Shutting down
+[2024-11-09 12:48:32,357] INFO [93020-4495119872] Shutting down
+[2024-11-09 12:48:32,358] INFO [93016-4564153856] Shutting down
+[2024-11-09 12:48:32,358] INFO [93019-4558812672] Shutting down
+[2024-11-09 12:48:32,378] INFO [93013-4501124608] Received SIGINT, exiting.
+[2024-11-09 12:48:32,382] INFO [93013-4501124608] Terminated child process [93016]
+[2024-11-09 12:48:32,383] INFO [93013-4501124608] Terminated child process [93018]
+[2024-11-09 12:48:32,384] INFO [93013-4501124608] Terminated child process [93019]
+[2024-11-09 12:48:32,385] INFO [93013-4501124608] Terminated child process [93020]
+[2024-11-09 12:48:32,385] INFO [93013-4501124608] Waiting for child process [93016]
+[2024-11-09 12:48:32,457] INFO [93018-4603991552] Waiting for application shutdown.
+[2024-11-09 12:48:32,457] INFO [93020-4495119872] Waiting for application shutdown.
+[2024-11-09 12:48:32,458] INFO [93018-4603991552] Application shutdown complete.
+[2024-11-09 12:48:32,459] INFO [93018-4603991552] Finished server process [93018]
+[2024-11-09 12:48:32,459] INFO [93020-4495119872] Application shutdown complete.
+[2024-11-09 12:48:32,459] INFO [93020-4495119872] Finished server process [93020]
+[2024-11-09 12:48:32,459] INFO [93016-4564153856] Waiting for application shutdown.
+[2024-11-09 12:48:32,460] INFO [93019-4558812672] Waiting for application shutdown.
+[2024-11-09 12:48:32,461] INFO [93016-4564153856] Application shutdown complete.
+[2024-11-09 12:48:32,462] INFO [93019-4558812672] Application shutdown complete.
+[2024-11-09 12:48:32,462] INFO [93016-4564153856] Finished server process [93016]
+[2024-11-09 12:48:32,462] INFO [93019-4558812672] Finished server process [93019]
+[2024-11-09 12:48:32,501] INFO [93013-4501124608] Waiting for child process [93018]
+[2024-11-09 12:48:32,503] INFO [93013-4501124608] Waiting for child process [93019]
+[2024-11-09 12:48:32,504] INFO [93013-4501124608] Waiting for child process [93020]
+[2024-11-09 12:48:32,504] INFO [93013-4501124608] Stopping parent process [93013]
+[2024-11-09 12:49:15,603] INFO [93561-4527187456] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2024-11-09 12:49:15,604] INFO [93561-4527187456] Started parent process [93561]
+[2024-11-09 12:49:20,249] INFO [93574-4590630400] Started server process [93574]
+[2024-11-09 12:49:20,249] INFO [93573-4484408832] Started server process [93573]
+[2024-11-09 12:49:20,249] INFO [93571-4642756096] Started server process [93571]
+[2024-11-09 12:49:20,249] INFO [93571-4642756096] Waiting for application startup.
+[2024-11-09 12:49:20,249] INFO [93574-4590630400] Waiting for application startup.
+[2024-11-09 12:49:20,249] INFO [93573-4484408832] Waiting for application startup.
+[2024-11-09 12:49:20,259] INFO [93572-4432430592] Started server process [93572]
+[2024-11-09 12:49:20,260] INFO [93572-4432430592] Waiting for application startup.
+[2024-11-09 12:49:20,325] INFO [93574-4590630400] Application startup complete.
+[2024-11-09 12:49:20,325] INFO [93573-4484408832] Application startup complete.
+[2024-11-09 12:49:20,325] INFO [93571-4642756096] Application startup complete.
+[2024-11-09 12:49:20,325] INFO [93572-4432430592] Application startup complete.
+[2024-11-09 12:49:51,781] INFO [93574-4590630400] Shutting down
+[2024-11-09 12:49:51,781] INFO [93573-4484408832] Shutting down
+[2024-11-09 12:49:51,787] INFO [93572-4432430592] Shutting down
+[2024-11-09 12:49:51,787] INFO [93571-4642756096] Shutting down
+[2024-11-09 12:49:51,882] INFO [93574-4590630400] Waiting for application shutdown.
+[2024-11-09 12:49:51,882] INFO [93573-4484408832] Waiting for application shutdown.
+[2024-11-09 12:49:51,883] INFO [93574-4590630400] Application shutdown complete.
+[2024-11-09 12:49:51,883] INFO [93573-4484408832] Application shutdown complete.
+[2024-11-09 12:49:51,883] INFO [93574-4590630400] Finished server process [93574]
+[2024-11-09 12:49:51,883] INFO [93573-4484408832] Finished server process [93573]
+[2024-11-09 12:49:51,889] INFO [93571-4642756096] Waiting for application shutdown.
+[2024-11-09 12:49:51,889] INFO [93572-4432430592] Waiting for application shutdown.
+[2024-11-09 12:49:51,891] INFO [93571-4642756096] Application shutdown complete.
+[2024-11-09 12:49:51,891] INFO [93572-4432430592] Application shutdown complete.
+[2024-11-09 12:49:51,892] INFO [93571-4642756096] Finished server process [93571]
+[2024-11-09 12:49:51,892] INFO [93572-4432430592] Finished server process [93572]
+[2024-11-09 12:49:52,032] INFO [93561-4527187456] Received SIGINT, exiting.
+[2024-11-09 12:49:52,032] INFO [93561-4527187456] Terminated child process [93571]
+[2024-11-09 12:49:52,033] INFO [93561-4527187456] Terminated child process [93572]
+[2024-11-09 12:49:52,033] INFO [93561-4527187456] Terminated child process [93573]
+[2024-11-09 12:49:52,033] INFO [93561-4527187456] Terminated child process [93574]
+[2024-11-09 12:49:52,034] INFO [93561-4527187456] Waiting for child process [93571]
+[2024-11-09 12:49:52,076] INFO [93561-4527187456] Waiting for child process [93572]
+[2024-11-09 12:49:52,077] INFO [93561-4527187456] Waiting for child process [93573]
+[2024-11-09 12:49:52,077] INFO [93561-4527187456] Waiting for child process [93574]
+[2024-11-09 12:49:52,078] INFO [93561-4527187456] Stopping parent process [93561]
