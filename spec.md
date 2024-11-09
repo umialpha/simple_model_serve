@@ -1,87 +1,80 @@
-# Simple Model Serve
-
-## Prerequisite
-
-为了运行在容器环境。必须首先安装docker/containerd等容器运行时。
-如果节点是GPU机型，还需要安装Nvdia Container Toolkit
+# Simple Model Serve Spec
 
 ## Architecture
 
-### RESTFUL API
+### RESTful API
 
-fastapi作为api层，定义端口、输入、输出、负责做validation等工作。
-为了扩展不同版本的api，因此将代码放入 app/router_v1beta1.py
+- Entrypoint: app/main.py
+- Multi-version Router: app/router_v1beta1.py
 
-### 模型推理runtime
-有许多方式实现模型推理层，例如 pytorch native，triton serve， torchserve， onnx runtime，
-对模型的保存方式也有多种，例如.pth，torchscript, 转换成onnx格式。
-由于没有任何的上下文，第一版本选择最简单的形式，即pytorch native。
+### Model Inference Runtime
 
-### observability
-实现了简单的可观测。
-1. promthues middleware, 对所有的api请求做 latency和
-2. 对核心函数记录耗时。
-3. 统计对模型指标，对于simplemodel，我假设输出是正确率，因此统计了"acc_simplemodel"
+- app/models.py: Model inference is implemented using the PyTorch native method.
+
+Notes:
+1. Enabling `model.eval()` and `torch.inference_mode()` can accelerate the inference process.
+2. There are various model inference runtimes available, such as PyTorch native, Triton Serve, TorchServe, and ONNX Runtime. Due to the absence of context, the first version opts for the simplest form, which is PyTorch native.
+
+### Observability
+
+- Basic observability has been implemented.
+    1. Prometheus middleware measures latency for all API requests.
+    2. Records the time taken for core functions.
+    3. Tracks model metrics; for simplemodel, it is assumed that the output is accuracy, hence the metric "acc_simplemodel" is monitored.
+visit `localhost:8088/metrics` to see more.
 
 ### OpenAPI
-通过`localhost:${PORT}/docs`可以访问OpenAPI，用以测试和试用。
+
+- OpenAPI can be accessed via `localhost:8088/docs` for testing and trial purposes.
 
 
-## How to Build the Image
+### Rolling Update
 
-To build the Docker image, run the following command in the root directory of the project:
+Assuming we need to upgrade to the image `simplemodel:dev`
 
-```sh
+1. Canary update requires running `make run-ha`
 
-make build
+2. Open the `manifests/dynamic-traefik.yaml` file
+Set `http.services.simple-model.weighted.services[1].weight` to `0`,
+as shown in the following yaml
+```yaml
+http:
+  routers:
+    my-router:
+      rule: "PathPrefix(`/`)"
+      service: simple-model
+  services:
+    simple-model:
+      weighted:
+        services:
+          - name: simple-model-v1@docker
+            weight: 50
+          - name: simple-model-v2@docker
+            weight: 0 # set 0 to upgrade simple-model-v2
+```
+3. Open `manifests/docker-compose.yaml`, 
+Set `simple-model-v2.image` to `simplemodel:dev`
+
+4. Execute 
+```bash
+docker compose -f manifests/docker-compose.yaml pull
+docker compose -f manifests/docker-compose.yaml up -d
 ```
 
-## How to Run it on Docker
+5. Open `manifests/dynamic-traefik.yaml`
+Set `http.services.simple-model.weighted.services[1].weight` to `50`
+Set `http.services.simple-model.weighted.services[0].weight` to `0`
 
-To run the Docker container, use the following command:
+6. Open `manifests/docker-compose.yaml`
+Set `simple-model-v1.image` to `simplemodel:dev`
 
-```sh
-make run
-```
+7. Open `manifests/dynamic-traefik.yaml`
+Set `http.services.simple-model.weighted.services[0].weight` to `50`
 
-## 如何保证7x24，并支持模型更新
-我们需要分情况讨论：
-1. 有k8s环境：
+### Additional Optimizations
 
-保证7x24: 
-采用deployment部署形式。
+1. Dockerfile
 
-模型更新：
-采用deployment rollingupdate的形式进行滚动更新，确保服务稳定性。
-如果需要基于流量控制的更新形式，例如金丝雀发布、蓝绿发布等，需要集群支持服务网格，例如istio、traefik等。
+    Copy the `requirements.txt` and install requirements before other files, as code modifications occur more frequently than dependency installations.
 
-2. 没有k8s环境：
-
-7x24：如果是单机情况，很难做到7x24
-模型更新：
-利用开源reverse proxy: traefik[https://traefik.io/traefik/]作为gateway，
-通过路由转发到后端。
-
-traefik: expose 8080  ----100%----> primary version v0
-                      |------0%----> canery version v0
-
-when rolling update:
-
-1. traefik: expose 8080  -----90%----> primary version v0
-                        |-----10%----> canery version v1
-
-
-如果一切指标正常，则继续修改流量
-traefik: expose 8080  -----80%----> primary version v0
-                        |-----20%----> canery version v1
-直到 
-
-traefik: expose 8080  -----0%----> primary version v0
-                        |-----100%----> canery version v1
-
-```
-
-
-一些优化的点
-1. dockerfile先拷贝requirements.txt
-2. 使用gunicorn preload避免多次加载模型。
+2. The gunicorn `preload` parameter is used to prevent the model from being loaded multiple times.

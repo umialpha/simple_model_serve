@@ -1,9 +1,9 @@
 # Simple Model Serve
 
-## Prerequisite
+## [Prerequisites](./prerequisites.md) 
 
-1. 安装docker/containerd等容器运行时。
-2. 如果节点是GPU机型，安装Nvdia Container Toolkit
+1. Install docker or other container runtimes.
+2. If the node has gpu, install `Nvidia Container Toolkit`.
 
 
 ## Get Started
@@ -12,16 +12,15 @@
 make build
 ```
 2. Run
-```bash
-# run a single restful service
-make run
-```
-or
-
-```bash
-# run a proxy and two containers for HA and rolling update.
-make run-ha
-```
+- Run a single-point service
+    ```bash
+    make run
+    ```
+- Run in HA mode, with a proxy and 2 backend services.
+    ```bash
+    make run-ha
+    ```
+3. visit `localhost:8088/docs`
 
 [optional] Run tests
 ```bash
@@ -30,12 +29,14 @@ make test
 
 ## Features
 
-1. 多个fastapi workers接受api请求，但只有一个模型被加载，减少内存/显存使用。
-2. HA & Rolling Update. 通过 proxy + many servers的形式实现HA，同时通过proxy的流量权重调整实现金丝雀发布。
-3. 可观测性。暴露HTTP请求和模型相关指标，参见 localhost:8088/metrics
-4. OpenAPI, 参见 localhost:8088/docs
+1. Multiple fastapi workers accept API requests, but only one model is loaded, reducing memory/GPU memory usage.
+2. HA & Rolling Update. Achieve HA through the proxy and multiple backends. Implement canary deployment by leveraging proxy traffic weight adjustment.
+3. Observability. Expose HTTP request and model-related metrics, see `localhost:8088/metrics`.
+4. OpenAPI, see `localhost:8088/docs`.
 
 ## Demo
-阿里云试一试已经部署好的HA Simple Model Serving.
-http://115.29.205.101:8088/docs : simple model openapi.
-http://115.29.205.101:8080/ : proxy dashboard.
+Try out the HA Simple Model Serving already deployed on Alibaba Cloud.
+`http://115.29.205.101:8088/docs`  : Simple Model Openapi.
+`http://115.29.205.101:8080/ ` : Proxy Dashboard.
+
+## [More Specification](./spec.md)
