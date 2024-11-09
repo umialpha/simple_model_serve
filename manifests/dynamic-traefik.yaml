@@ -1,0 +1,14 @@
+http:
+  routers:
+    my-router:
+      rule: "PathPrefix(`/`)"
+      service: simple-model
+
+  services:
+    simple-model:
+      weighted:
+        services:
+          - name: simple-model-v1@docker
+            weight: 50
+          - name:  simple-model-v2@docker
+            weight: 50

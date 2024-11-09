@@ -1,0 +1,52 @@
+services:
+  # Traefik 服务
+  traefik:
+    image: traefik:v2.9
+    command:
+      - "--api.insecure=true"  # 启用 Traefik 的 API，用于调试
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:8088"  # 定义 web 入口
+      - "--providers.file.watch=true"
+      - "--providers.file.filename=/etc/traefik/manifests/dynamic-traefik.yaml"
+    ports:
+      - "8080:8080"    # HTTP 端口
+      - "8088:8088"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - ".:/etc/traefik/manifests:rw"  # Traefik 配置文件
+
+  # 应用服务 v1
+  simple-model-v1:
+    image: simplemodel:latest
+    environment:
+      - PORT=5000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: ["gpu"]  # 请求 GPU 资源
+              device_ids: ["0"]  # 使用 GPU 设备 0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.simple-model-v1.loadbalancer.sticky=true"
+      - "traefik.http.services.simple-model-v1.loadbalancer.server.port=5000"  # 应用暴露的端口
+      - "traefik.http.routers.simple-model-v1.entrypoints=traefik"
+
+  # 应用服务 v2
+  simple-model-v2:
+    image: simplemodel:latest
+    environment:
+      - PORT=5000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: ["gpu"]
+              device_ids: ["0"]  # 使用 GPU 设备 0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.simple-model-v2.loadbalancer.sticky=true"
+      - "traefik.http.services.simple-model-v2.loadbalancer.server.port=5000"
+      - "traefik.http.routers.simple-model-v2.entrypoints=traefik"
