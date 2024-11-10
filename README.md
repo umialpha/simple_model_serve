@@ -40,9 +40,9 @@ make test
 4. OpenAPI, see `localhost:8088/docs`.
 
 ## Demo
-Try out the HA Simple Model Serving already deployed on Alibaba Cloud.
-`http://115.29.205.101:8088/docs`  : Simple Model Openapi.
-`http://115.29.205.101:8080/ ` : Proxy Dashboard.
-`http://115.29.205.101:8088/metrics`: Metrics exposed.
+
+a `Simple Model Serve` service is already deployed on ACK Serverless
+
+see `http://47.112.99.98:8088/docs`
 
 ## [More Specification](./spec.md)
