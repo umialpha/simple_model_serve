@@ -12,11 +12,16 @@
 make build
 ```
 2. Run
-- Run a single-point service
+- Run a single-point service using gpu
     ```bash
-    make run
+    make run-gpu
     ```
-- Run in HA mode, with a proxy and 2 backend services.
+- Run a single-point service using cpu
+    ```bash
+    make run-cpu
+    ```
+
+- Run in HA mode, with a proxy and 2 backend services using different gpus.
     ```bash
     make run-ha
     ```
