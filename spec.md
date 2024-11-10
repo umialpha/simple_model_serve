@@ -4,12 +4,12 @@
 
 ### RESTful API
 
-- Entrypoint: app/main.py
-- Multi-version Router: app/router_v1beta1.py
+- Entrypoint: `app/main.py`
+- Multi-version Router: `app/router_v1beta1.py`
 
 ### Model Inference Runtime
 
-- app/models.py: Model inference is implemented using the PyTorch native method.
+- `app/models.py`: Model inference is implemented using the PyTorch native method.
 
 Notes:
 1. Enabling `model.eval()` and `torch.inference_mode()` can accelerate the inference process.
@@ -35,8 +35,8 @@ Assuming we need to upgrade to the image `simplemodel:dev`
 1. Canary update requires running `make run-ha`
 
 2. Open the `manifests/dynamic-traefik.yaml` file
-Set `http.services.simple-model.weighted.services[1].weight` to `0`,
-as shown in the following yaml
+
+  - Set `http.services.simple-model.weighted.services[1].weight` to `0`, as shown in the following yaml
 ```yaml
 http:
   routers:
@@ -53,7 +53,8 @@ http:
             weight: 0 # set 0 to upgrade simple-model-v2
 ```
 3. Open `manifests/docker-compose.yaml`, 
-Set `simple-model-v2.image` to `simplemodel:dev`
+
+  - Set `simple-model-v2.image` to `simplemodel:dev`
 
 4. Execute 
 ```bash
@@ -62,19 +63,20 @@ docker compose -f manifests/docker-compose.yaml up -d
 ```
 
 5. Open `manifests/dynamic-traefik.yaml`
-Set `http.services.simple-model.weighted.services[1].weight` to `50`
-Set `http.services.simple-model.weighted.services[0].weight` to `0`
+
+  - Set `http.services.simple-model.weighted.services[1].weight` to `50`
+  - Set `http.services.simple-model.weighted.services[0].weight` to `0`
 
 6. Open `manifests/docker-compose.yaml`
-Set `simple-model-v1.image` to `simplemodel:dev`
+  - Set `simple-model-v1.image` to `simplemodel:dev`
 
 7. Open `manifests/dynamic-traefik.yaml`
-Set `http.services.simple-model.weighted.services[0].weight` to `50`
+  - Set `http.services.simple-model.weighted.services[0].weight` to `50`
 
 ### Additional Optimizations
 
 1. Dockerfile
 
-    Copy the `requirements.txt` and install requirements before other files, as code modifications occur more frequently than dependency installations.
+    Copy the `requirements.txt` and install requirements **before** other files, as code modifications occur more frequently than dependency installations.
 
-2. The gunicorn `preload` parameter is used to prevent the model from being loaded multiple times.
+2. Use gunicorn `preload` parameter to prevent the model from being loaded multiple times.
